@@ -2,13 +2,13 @@ name: Lint Test and Deploy
 on: # [push, workflow_dispatch]
   pull_request: 
     types:
-      - opened
-  
-  workflow_dipactch:
-  push:
-    - main # main
-    - 'dev-*'  #dev-new or dev-csldsf
-    - 'feat/**' # feat/new or feat/csl etc
+      - opened  
+  workflow_dispatch:
+  push: 
+    branches:
+      - main # main
+      - 'dev-*'  #dev-new or dev-csldsf
+      - 'feat/**' # feat/new or feat/csl etc
 
 
 
