@@ -4,7 +4,17 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - name: Check the workflow execution
-      run: echo "Ran successfully !"
+    - name: Get Codes of Node application
+      run: actions/checkout@v3
+    - name: Install Node js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+        - name: Install Dependencies
+          run: npm ci
+        - name: Run Test
+          run: npm test
+        - name: Build Deploy
+          run: echo "Deploying .."
 
   
