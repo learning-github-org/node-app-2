@@ -2,7 +2,8 @@ name: Lint Test and Deploy
 on: [push, workflow_dispatch]
 jobs: 
   test:
-  runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
+    steps:
     - name: Check the workflow execution
       run: echo "Ran successfully !"
 
