@@ -7,7 +7,7 @@ on: # [push, workflow_dispatch]
   workflow_dipactch:
   push:
     - main # main
-    - 'dev-*'  #dev-new or dev-csl
+    - 'dev-*'  #dev-new or dev-csldsf
     - 'feat/**' # feat/new or feat/csl etc
 
 
