@@ -10,11 +10,11 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 18
-      - name: Install Dependencies
-        run: npm ci
-      - name: Run Test
-        run: npm test
-      - name: Build Deploy
-        run: echo "Deploying .."
+    - name: Install Dependencies
+      run: npm ci
+    - name: Run Test
+      run: npm test
+    - name: Build Deploy
+      run: echo "Deploying .."
 
   
