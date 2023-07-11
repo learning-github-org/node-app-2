@@ -16,7 +16,7 @@ jobs:
       run: npm test
 
   lint:
-  needs: test
+    needs: test
     runs-on: ubuntu-latest
     steps:
     - name: Get Codes of Node application
@@ -33,7 +33,7 @@ jobs:
       run: echo"Linting successfull"
   
   Deploy:
-  needs: test
+    needs: test
     runs-on: ubuntu-latest
     steps:
     - name: Get Codes of Node application
