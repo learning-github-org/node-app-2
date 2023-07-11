@@ -14,10 +14,40 @@ jobs:
       run: npm ci
     - name: Run Test
       run: npm test
+
+  lint:
+  needs: test
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get Codes of Node application
+      uses: actions/checkout@v3
+    - name: Install Node js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+    - name: Install Dependencies
+      run: npm ci
     - name: Lint the Package
       run: npm run lint -- --fix
-      
-    - name: Build Deploy
+    - name: Print the successful message
+      run: echo"Linting successfull"
+  
+  Deploy:
+  needs: test
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get Codes of Node application
+      uses: actions/checkout@v3
+    - name: Install Node js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+    - name: Install Dependencies
+      run: npm ci
+    - name: Deploy Begins
       run: echo "Deploying .."
+
+
+    
 
   
