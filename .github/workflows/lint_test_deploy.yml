@@ -9,6 +9,8 @@ on: # [push, workflow_dispatch]
       - main # main
       - 'dev-*'  #dev-new or dev-csldsf
       - 'feat/**' # feat/new or feat/csl etc
+    paths-ignore:
+      - 'github/src/assets/*'
 
 
 
