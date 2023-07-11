@@ -30,7 +30,7 @@ jobs:
     - name: Lint the Package
       run: npm run lint -- --fix
     - name: Print the successful message
-      run: echo"Linting successfull"
+      run: echo "Linting successfull"
   
   Deploy:
     needs: test
